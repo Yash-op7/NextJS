@@ -279,3 +279,4 @@ export async function GET(request, { params }) {
 ```
 ## Middlewares
 ![alt text](image-36.png)
+- create middleware.js in the root
