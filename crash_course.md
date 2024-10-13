@@ -202,7 +202,12 @@ output:
 
   - `context`: This contains additional information, like `params` & `searchParams` (for dynamic routes).
     - `params`: If you’re using dynamic routes (e.g., `/api/products/[id]`), you can access the URL parameters through `context.params`. This is the equivalent of `req.params` in Express.
-    - `searchParams`: The query string (e.g., `/api/products?category=books`) is accessible via `context.searchParams`.
+    - `searchParams`: Only for dynamic routes. The query string (e.g., `/api/products?category=books`) is accessible via `context.searchParams`. 
+    - Just use this for static routes
+    ```js
+    const url = new URL(req.url);
+    const id = url.searchParams.get('id');
+```
 
 - setting status code: `return NextResponse.json({ message: 'Hello' }, { status: 200 });`
 - setting cookie:
