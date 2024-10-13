@@ -6,11 +6,11 @@ import { users } from "./utils/db";
 // let data = JSON.parse(JSON.stringify(users));
 let data = [1, 2, 3, 4, 5];
 
-// export async function GET(request, context) {
+// export async function GET(request) {
 //   return NextResponse.json(data, { status: 200 });
 // }
 
-// export async function POST(req, context) {
+// export async function POST(req) {
 //   const newUser = await req.json();
 //   data = [...data, newUser];
 //   return NextResponse.json(
@@ -23,7 +23,7 @@ let data = [1, 2, 3, 4, 5];
 //   );
 // }
 
-export async function GET(req, context) {
+export async function GET(req) {
     // let body = await req.json();
     // let id = context.params.id;
     const url = new URL(req.url);
